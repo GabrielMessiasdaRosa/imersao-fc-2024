@@ -1,0 +1,39 @@
+### vars ###
+// eventId 
+@eventId = 1
+
+
+
+### Create an event ###
+
+POST http://localhost:3000http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "name": "Event Name",
+    "date": "2022-12-31",
+    "location": "Event Location"
+}
+
+### Read all events ###
+
+GET http://localhost:3000/events
+
+### Read a specific event ###
+
+GET http://localhost:3000/events/{{eventId}}
+
+### Update an event ###
+
+PUT http://localhost:3000/events/{{eventId}}
+Content-Type: application/json
+
+{
+    "name": "Updated Event Name",
+    "date": "2023-01-01",
+    "location": "Updated Event Location"
+}
+
+### Delete an event ###
+
+DELETE http://localhost:3000/events/{{eventId}}
